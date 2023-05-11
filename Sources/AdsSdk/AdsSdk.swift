@@ -1,15 +1,15 @@
 import Flutter
 
-public struct AdsSdk {
-    var adsFlutter: AdsSFlutter
+struct AdsSdk {
+    var adsFlutter: AdsFlutter
     var methodChannel: FlutterMethodChannel
-
-    public init() {
-        adsFlutter = AdsSFlutter()
-        methodChannel = adsFlutter.methodChannel
+    
+    func flutterEngine() -> FlutterEngine {
+       return adsFlutter.flutterEngine
     }
     
-    // TODO: Implement [presentFlutter]
-    public func presentFlutter(){
+    init() {
+        adsFlutter = AdsFlutter()
+        methodChannel = adsFlutter.methodChannel
     }
 }

@@ -1,12 +1,12 @@
 import Flutter
 
-public class AdsSFlutter{
+class AdsFlutter{
     let channelId = "flutter_ads_sdk"
     
-    public var flutterEngine: FlutterEngine
-    public var methodChannel: FlutterMethodChannel
+    var flutterEngine: FlutterEngine
+    var methodChannel: FlutterMethodChannel
     
-    public init() {
+    init() {
         flutterEngine = FlutterEngine(name: "flutter_engine")
         flutterEngine.run()
         methodChannel = FlutterMethodChannel.init(name: channelId, binaryMessenger: flutterEngine as! FlutterBinaryMessenger)
@@ -14,6 +14,6 @@ public class AdsSFlutter{
     }
     
     // TODO: Implement [handle]
-    public func handle(call: FlutterMethodCall, result: @escaping FlutterResult) {
+    func handle(call: FlutterMethodCall, result: @escaping FlutterResult) {
     }
 }
